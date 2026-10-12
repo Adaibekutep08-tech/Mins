@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мифологические Легенды — Онлайн Манхва</title>
+    
+    <!-- Шрифты и иконки -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header class="site-header">
+        <a href="#" class="logo" data-page="catalog">
+            <i data-lucide="sparkles"></i>
+            <span>Мифы & Манхва</span>
+        </a>
+        
+        <nav class="nav-links" id="navLinks">
+            <a href="#" class="nav-item active" data-page="catalog"><i data-lucide="grid"></i> Выбор манхвы</a>
+            <a href="#" class="nav-item" data-page="reader"><i data-lucide="book-open"></i> Читалка</a>
+            <a href="#" class="nav-item" data-page="compare"><i data-lucide="columns"></i> Таблица</a>
+            <a href="#" class="nav-item" data-page="quiz"><i data-lucide="help-circle"></i> Викторина</a>
+        </nav>
+
+        <button class="menu-btn" id="menuToggle"><i data-lucide="menu"></i></button>
+    </header>
+
+    <main class="container">
+        
+        <!-- СТРАНИЦА 1: ВЫБОР МАНХВЫ (ГЛАВНАЯ) -->
+        <section id="page-catalog" class="page-view">
+            <div class="hero-banner">
+                <h1>Легенды Древних Миров</h1>
+                <p>Выберите мифологическую манхву по записям и погрузитесь в истории богов и героев</p>
+            </div>
+
+            <div class="manhwa-grid">
+                <!-- Греция -->
+                <div class="manhwa-card" data-manhwa="greek">
+                    <div class="card-badge">Древняя Греция</div>
+                    <h3>Мифы Древней Греции</h3>
+                    <p class="card-desc">Геракл, Прометей, Икар, Дедал — великие испытания, дерзость и сила духа.</p>
+                    <button class="btn start-read-btn"><i data-lucide="book-open"></i> Читать главу</button>
+                </div>
+
+                <!-- Славянская -->
+                <div class="manhwa-card" data-manhwa="slav">
+                    <div class="card-badge">Славянская мифология</div>
+                    <h3>Славянская мифология</h3>
+                    <p class="card-desc">Миф о солнце, таинственный Леший и домашний хранитель Домовой.</p>
+                    <button class="btn start-read-btn"><i data-lucide="book-open"></i> Читать главу</button>
+                </div>
+
+                <!-- Тюркская -->
+                <div class="manhwa-card" data-manhwa="turk">
+                    <div class="card-badge">Тюркская мифология</div>
+                    <h3>Тюркская мифология</h3>
+                    <p class="card-desc">Тенгри, Яйцю, Умай, От Ана, Ер су и подземный владыка Ерлик.</p>
+                    <button class="btn start-read-btn"><i data-lucide="book-open"></i> Читать главу</button>
+                </div>
+
+                <!-- Библейская -->
+                <div class="manhwa-card" data-manhwa="bible">
+                    <div class="card-badge">Библейская мифология</div>
+                    <h3>Библейские сказания</h3>
+                    <p class="card-desc">Грандиозная Вавилонская башня и мудрый царь Соломон.</p>
+                    <button class="btn start-read-btn"><i data-lucide="book-open"></i> Читать главу</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- СТРАНИЦА 2: ЧИТАЛКА -->
+        <section id="page-reader" class="page-view" style="display: none;">
+            <div class="reader-top-bar">
+                <button class="btn-secondary" id="backToCatalogBtn"><i data-lucide="arrow-left"></i> К выбору манхвы</button>
+                <div class="chapter-selector" id="chapterSelector"></div>
+            </div>
+
+            <div class="manhwa-viewer">
+                <div class="viewer-header">
+                    <h2 id="chapterTitle">Название Манхвы</h2>
+                </div>
+                
+                <div class="manhwa-pages-container">
+                    <img src="" class="manhwa-page-img" alt="Страница манхвы" id="activePageImg">
+                </div>
+
+                <div class="viewer-controls">
+                    <button class="btn" id="prevPageBtn"><i data-lucide="chevron-left"></i> Назад</button>
+                    <span id="pageCounter">Страница 1 из 1</span>
+                    <button class="btn" id="nextPageBtn">Вперед <i data-lucide="chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- СТРАНИЦА 3: ТАБЛИЦА -->
+        <section id="page-compare" class="page-view" style="display: none;">
+            <div class="page-title">
+                <h2>Сравнение Мифологий</h2>
+                <p>Ключевые персонажи и образы из учебных записей</p>
+            </div>
+
+            <div class="table-wrapper">
+                <table class="compare-table">
+                    <thead>
+                        <tr>
+                            <th>Традиция</th>
+                            <th>Ключевые персонажи и образы</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Древняя Греция</strong></td>
+                            <td>Геракл, Прометей, Икар, Дедал</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Славянская</strong></td>
+                            <td>Миф о солнце, Леший, Домовой</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Тюркская</strong></td>
+                            <td>Тенгри, Яйцю, Умай, От Ана, Ер су, Ерлик</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Библейская</strong></td>
+                            <td>Вавилонская башня, Соломон</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- СТРАНИЦА 4: ВИКТОРИНА -->
+        <section id="page-quiz" class="page-view" style="display: none;">
+            <div class="quiz-card">
+                <div class="quiz-header">
+                    <h2><i data-lucide="award"></i> Викторина: Знаток Мифов</h2>
+                    <p>Проверь свои знания по всем разделам из блокнота!</p>
+                </div>
+
+                <div id="quizContainer">
+                    <div class="question-block">
+                        <h3 id="questionText">Загрузка вопроса...</h3>
+                        <div class="options-grid" id="optionsGrid"></div>
+                    </div>
+                </div>
+
+                <div id="quizResult" class="quiz-result" style="display: none;">
+                    <h3>Викторина завершена!</h3>
+                    <p id="scoreText">Ваш результат: 0 из 4</p>
+                    <button class="btn" id="restartQuizBtn"><i data-lucide="rotate-ccw"></i> Пройти снова</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Проект «Мифология в Манхве». Школьный цифровой экспонат.</p>
+    </footer>
+
+    <script src="js/js.js"></script>
+</body>
+</html>
